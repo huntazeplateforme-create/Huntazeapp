@@ -5,7 +5,7 @@ echo "🔨 Building Huntaze Desktop..."
 cd "$(dirname "$0")/.."
 
 # Resolve version for consistent artifact naming
-APP_VERSION="$(node -p \"require('./package.json').version\")"
+APP_VERSION="$(node -p "require('./package.json').version")"
 DMG_NAME="Huntaze-${APP_VERSION}-arm64.dmg"
 
 # Build TypeScript
