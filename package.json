@@ -1,6 +1,6 @@
 {
   "name": "huntaze-desktop",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Huntaze Desktop - Native Electron app for OnlyFans creators",
   "author": "Huntaze Team",
   "license": "MIT",
@@ -53,4 +53,3 @@
     }
   }
 }
-

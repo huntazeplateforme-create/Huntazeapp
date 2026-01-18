@@ -4,6 +4,10 @@ set -e
 echo "🔨 Building Huntaze Desktop..."
 cd "$(dirname "$0")/.."
 
+# Resolve version for consistent artifact naming
+APP_VERSION="$(node -p \"require('./package.json').version\")"
+DMG_NAME="Huntaze-${APP_VERSION}-arm64.dmg"
+
 # Build TypeScript
 npm run build
 
@@ -28,7 +32,7 @@ if [ -d "$APP_PATH" ]; then
   echo ""
   echo "✅ All done!"
   echo "📦 Signed app: $APP_PATH"
-  echo "📦 DMG: release/Huntaze-0.0.3-arm64.dmg"
+  echo "📦 DMG: release/$DMG_NAME"
 else
   echo "❌ App not found at $APP_PATH"
   exit 1

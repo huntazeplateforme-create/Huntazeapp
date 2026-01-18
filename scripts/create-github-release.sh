@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
 
-VERSION="v0.0.3"
+VERSION="v0.0.4"
 REPO="huntazeplateforme-create/Huntazeapp"
-DMG_PATH="release/Huntaze-0.0.3-arm64.dmg"
+DMG_PATH="release/Huntaze-0.0.4-arm64.dmg"
 
 echo "🚀 Creating GitHub Release $VERSION..."
 echo "Repository: $REPO"
@@ -40,7 +40,7 @@ Native Electron app for OnlyFans creators - Multi-account support + Auto-sync to
 ## 📥 Download
 
 **macOS (Apple Silicon only)**
-- File: \`Huntaze-0.0.3-arm64.dmg\`
+- File: \`Huntaze-0.0.4-arm64.dmg\`
 - Size: ~104 MB
 - Requirements: macOS 10.12+ • M1/M2/M3
 
@@ -58,8 +58,8 @@ macOS will show a security warning - this is normal.
 
 **Alternative (Terminal):**
 \`\`\`bash
-xattr -cr ~/Downloads/Huntaze-0.0.3-arm64.dmg
-open ~/Downloads/Huntaze-0.0.3-arm64.dmg
+xattr -cr ~/Downloads/Huntaze-0.0.4-arm64.dmg
+open ~/Downloads/Huntaze-0.0.4-arm64.dmg
 # After copying to Applications:
 xattr -cr /Applications/Huntaze.app
 open /Applications/Huntaze.app
@@ -123,4 +123,4 @@ echo "✅ Release created successfully!"
 echo "🔗 View at: https://github.com/$REPO/releases/tag/$VERSION"
 echo ""
 echo "📦 Download URL:"
-echo "https://github.com/$REPO/releases/download/$VERSION/Huntaze-0.0.3-arm64.dmg"
+echo "https://github.com/$REPO/releases/download/$VERSION/Huntaze-0.0.4-arm64.dmg"
