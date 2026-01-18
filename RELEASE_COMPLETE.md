@@ -1,16 +1,16 @@
-# ✅ Huntaze Desktop v0.0.3 - Release Complete
+# ✅ Huntaze Desktop v0.0.4 - Release Complete
 
 ## 🎉 Déploiement terminé avec succès !
 
 ### 📦 Release GitHub
-- ✅ **URL** : https://github.com/huntazeplateforme-create/Huntazeapp/releases/tag/v0.0.3
-- ✅ **DMG** : Huntaze-0.0.3-arm64.dmg (104 MB)
+- ✅ **URL** : https://github.com/huntazeplateforme-create/Huntazeapp/releases/tag/v0.0.4
+- ✅ **DMG** : Huntaze-0.0.4-arm64.dmg (104 MB)
 - ✅ **Type** : Pre-release (Beta)
 - ✅ **Signature** : Ad-hoc (non-Apple Developer)
 
 ### 🔗 Lien de téléchargement actif
 ```
-https://github.com/huntazeplateforme-create/Huntazeapp/releases/download/v0.0.3/Huntaze-0.0.3-arm64.dmg
+https://github.com/huntazeplateforme-create/Huntazeapp/releases/download/v0.0.4/Huntaze-0.0.4-arm64.dmg
 ```
 
 **Vérifié** : ✅ Lien fonctionne (HTTP 302 → CDN GitHub)
@@ -41,11 +41,11 @@ Utilisateur va sur **app.huntaze.com/of-connect**
 
 ### 2. Téléchargement
 - Clique sur "Desktop App" ou va sur `/desktop/install`
-- Télécharge `Huntaze-0.0.3-arm64.dmg` depuis GitHub
+- Télécharge `Huntaze-0.0.4-arm64.dmg` depuis GitHub
 
 ### 3. Installation
 - Ouvre le DMG
-- Glisse Huntaze.app dans Applications
+- Glisse Huntaze Desktop.app dans Applications
 - **Right-click** → "Open" (contourne Gatekeeper)
 
 ### 4. Utilisation
@@ -57,7 +57,7 @@ Utilisateur va sur **app.huntaze.com/of-connect**
 ## 📊 Statistiques
 
 ### Build
-- **Version** : 0.0.3
+- **Version** : 0.0.4
 - **Taille DMG** : 104 MB
 - **Plateforme** : macOS 10.12+ (Apple Silicon)
 - **Signature** : Ad-hoc (gratuite)
@@ -65,7 +65,7 @@ Utilisateur va sur **app.huntaze.com/of-connect**
 ### Code
 - **Repository** : huntazeplateforme-create/Huntazeapp
 - **Branch** : main
-- **Commits** : 2 (initial + v0.0.3)
+- **Commits** : 2 (initial + v0.0.4)
 - **Fichiers** : 13 (src, scripts, docs)
 
 ### Documentation
@@ -151,7 +151,7 @@ gh release delete v0.0.X --repo huntazeplateforme-create/Huntazeapp --yes
 
 ## 🎉 Résultat
 
-**L'app Huntaze Desktop v0.0.3 est maintenant disponible publiquement !**
+**L'app Huntaze Desktop v0.0.4 est maintenant disponible publiquement !**
 
 Les utilisateurs peuvent :
 1. Aller sur https://app.huntaze.com/desktop/install

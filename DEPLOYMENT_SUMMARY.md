@@ -3,9 +3,9 @@
 ## 📦 Ce qui a été fait
 
 ### 1. Build de l'app avec signature ad-hoc
-- ✅ Version 0.0.3
+- ✅ Version 0.0.4
 - ✅ Signature ad-hoc appliquée (évite "App is damaged")
-- ✅ DMG créé : `release/Huntaze-0.0.3-arm64.dmg` (104 MB)
+- ✅ DMG créé : `release/Huntaze-0.0.4-arm64.dmg` (104 MB)
 - ✅ Vérification : `valid on disk` + `satisfies Designated Requirement`
 
 ### 2. Code poussé sur GitHub
@@ -31,9 +31,9 @@
 **Action requise** : Upload du DMG sur GitHub Releases
 
 1. Va sur : https://github.com/huntazeplateforme-create/Huntazeapp/releases/new
-2. Tag : `v0.0.3`
-3. Title : `Huntaze Desktop v0.0.3 - Beta with Ad-hoc Signature`
-4. Upload : `apps/huntaze-desktop/release/Huntaze-0.0.3-arm64.dmg`
+2. Tag : `v0.0.4`
+3. Title : `Huntaze Desktop v0.0.4 - Beta with Ad-hoc Signature`
+4. Upload : `apps/huntaze-desktop/release/Huntaze-0.0.4-arm64.dmg`
 5. Coche "Set as a pre-release"
 6. Publie
 
@@ -48,7 +48,7 @@ Voir `CREATE_GITHUB_RELEASE.md` pour les détails complets.
 3. **Clique sur** : "Coming Q2 2026" ou lien vers `/desktop`
 4. **Page `/desktop`** : Présentation + bouton "Download"
 5. **Page `/desktop/install`** : Instructions + lien de téléchargement
-6. **Télécharge** : `Huntaze-0.0.3-arm64.dmg` depuis GitHub
+6. **Télécharge** : `Huntaze-0.0.4-arm64.dmg` depuis GitHub
 7. **Installe** : Suit les instructions (right-click → Open)
 8. **Lance l'app** : Charge `app.huntaze.com` dans Electron
 9. **Connecte OnlyFans** : Clique sur "Open OnlyFans & Connect"
@@ -58,7 +58,7 @@ Voir `CREATE_GITHUB_RELEASE.md` pour les détails complets.
 
 1. **Va sur** : https://github.com/huntazeplateforme-create/Huntazeapp
 2. **Clique sur** : "Releases"
-3. **Télécharge** : `Huntaze-0.0.3-arm64.dmg`
+3. **Télécharge** : `Huntaze-0.0.4-arm64.dmg`
 4. **Suit le README** : Instructions d'installation
 
 ## 📊 Vérifications

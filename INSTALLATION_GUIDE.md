@@ -6,7 +6,7 @@ Si vous voyez ce message, c'est normal ! L'app n'est pas encore notarisée par A
 
 ### Solution 1 : Via System Settings (Recommandé)
 
-1. **Double-cliquez** sur `Huntaze.app` → Message "damaged" apparaît
+1. **Double-cliquez** sur `Huntaze Desktop.app` → Message "damaged" apparaît
 2. Ouvrez **System Settings** → **Privacy & Security**
 3. Scrollez vers le bas → Vous verrez un message concernant Huntaze
 4. Cliquez sur **"Open Anyway"**
@@ -17,7 +17,7 @@ Si vous voyez ce message, c'est normal ! L'app n'est pas encore notarisée par A
 
 ```bash
 # Ouvrez Terminal et tapez :
-xattr -cr "/Applications/Huntaze.app"
+xattr -cr "/Applications/Huntaze Desktop.app"
 
 # Puis lancez l'app normalement
 ```
@@ -43,7 +43,7 @@ sudo spctl --master-enable
 
 1. Téléchargez le fichier `.dmg`
 2. Double-cliquez pour monter le volume
-3. Glissez `Huntaze.app` dans votre dossier **Applications**
+3. Glissez `Huntaze Desktop.app` dans votre dossier **Applications**
 4. Suivez les étapes ci-dessus pour contourner Gatekeeper
 
 ## 🔐 Pourquoi ce message ?

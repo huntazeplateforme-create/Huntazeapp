@@ -52,8 +52,8 @@ macOS will show a security warning - this is normal.
 **Quick Install:**
 1. Download the DMG
 2. Open the DMG
-3. Drag Huntaze.app to Applications
-4. **Right-click** on Huntaze.app → **\"Open\"** (don't double-click!)
+3. Drag Huntaze Desktop.app to Applications
+4. **Right-click** on Huntaze Desktop.app → **\"Open\"** (don't double-click!)
 5. Click **\"Open\"** again in the alert
 
 **Alternative (Terminal):**
@@ -61,8 +61,8 @@ macOS will show a security warning - this is normal.
 xattr -cr ~/Downloads/Huntaze-0.0.4-arm64.dmg
 open ~/Downloads/Huntaze-0.0.4-arm64.dmg
 # After copying to Applications:
-xattr -cr /Applications/Huntaze.app
-open /Applications/Huntaze.app
+xattr -cr \"/Applications/Huntaze Desktop.app\"
+open \"/Applications/Huntaze Desktop.app\"
 \`\`\`
 
 Full installation guide: https://app.huntaze.com/desktop/install

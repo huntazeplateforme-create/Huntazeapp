@@ -2,7 +2,7 @@
 
 ## 🔍 Problème identifié
 
-Le DMG `Huntaze-0.0.3-arm64` n'a **aucune signature** (pas de dossier `_CodeSignature`), ce qui déclenche "App is damaged" sur macOS moderne.
+Le DMG `Huntaze-0.0.4-arm64.dmg` n'a **aucune signature** (pas de dossier `_CodeSignature`), ce qui déclenche "App is damaged" sur macOS moderne.
 
 ## ✅ Solutions appliquées
 
@@ -56,13 +56,13 @@ Si tu as déjà le DMG et veux juste le signer :
 
 ```bash
 # Monte le DMG
-hdiutil attach Huntaze-0.0.3-arm64.dmg
+hdiutil attach Huntaze-0.0.4-arm64.dmg
 
 # Signe l'app
-codesign --force --deep --sign - "/Volumes/Huntaze/Huntaze.app"
+codesign --force --deep --sign - "/Volumes/Huntaze/Huntaze Desktop.app"
 
 # Vérifie
-codesign --verify --deep --strict --verbose=2 "/Volumes/Huntaze/Huntaze.app"
+codesign --verify --deep --strict --verbose=2 "/Volumes/Huntaze/Huntaze Desktop.app"
 
 # Démonte
 hdiutil detach "/Volumes/Huntaze"

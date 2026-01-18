@@ -4,7 +4,7 @@
 
 Le DMG signé est disponible ici :
 ```
-apps/huntaze-desktop/release/Huntaze-0.0.3-arm64.dmg
+apps/huntaze-desktop/release/Huntaze-0.0.4-arm64.dmg
 ```
 
 ## 🚀 Étapes pour créer la release
@@ -15,13 +15,13 @@ Ouvre : https://github.com/huntazeplateforme-create/Huntazeapp/releases/new
 
 ### 2. Remplir les informations
 
-**Tag version** : `v0.0.3`
+**Tag version** : `v0.0.4`
 
-**Release title** : `Huntaze Desktop v0.0.3 - Beta with Ad-hoc Signature`
+**Release title** : `Huntaze Desktop v0.0.4 - Beta with Ad-hoc Signature`
 
 **Description** :
 ```markdown
-# 🚀 Huntaze Desktop v0.0.3 (Beta)
+# 🚀 Huntaze Desktop v0.0.4 (Beta)
 
 Native Electron app for OnlyFans creators - Multi-account support + Auto-sync to cloud
 
@@ -36,7 +36,7 @@ Native Electron app for OnlyFans creators - Multi-account support + Auto-sync to
 ## 📥 Download
 
 **macOS (Apple Silicon only)**
-- File: `Huntaze-0.0.3-arm64.dmg`
+- File: `Huntaze-0.0.4-arm64.dmg`
 - Size: ~104 MB
 - Requirements: macOS 10.12+ • M1/M2/M3
 
@@ -48,17 +48,17 @@ macOS will show a security warning - this is normal.
 **Quick Install:**
 1. Download the DMG
 2. Open the DMG
-3. Drag Huntaze.app to Applications
-4. **Right-click** on Huntaze.app → **"Open"** (don't double-click!)
+3. Drag Huntaze Desktop.app to Applications
+4. **Right-click** on Huntaze Desktop.app → **"Open"** (don't double-click!)
 5. Click **"Open"** again in the alert
 
 **Alternative (Terminal):**
 ```bash
-xattr -cr ~/Downloads/Huntaze-0.0.3-arm64.dmg
-open ~/Downloads/Huntaze-0.0.3-arm64.dmg
+xattr -cr ~/Downloads/Huntaze-0.0.4-arm64.dmg
+open ~/Downloads/Huntaze-0.0.4-arm64.dmg
 # After copying to Applications:
-xattr -cr /Applications/Huntaze.app
-open /Applications/Huntaze.app
+xattr -cr "/Applications/Huntaze Desktop.app"
+open "/Applications/Huntaze Desktop.app"
 ```
 
 Full installation guide: https://app.huntaze.com/desktop/install
@@ -118,7 +118,7 @@ Full installation guide: https://app.huntaze.com/desktop/install
 
 Dans la section "Attach binaries", clique sur "Attach files" et upload :
 ```
-apps/huntaze-desktop/release/Huntaze-0.0.3-arm64.dmg
+apps/huntaze-desktop/release/Huntaze-0.0.4-arm64.dmg
 ```
 
 ### 4. Publier
@@ -130,7 +130,7 @@ apps/huntaze-desktop/release/Huntaze-0.0.3-arm64.dmg
 
 Après publication, le lien de téléchargement sera :
 ```
-https://github.com/huntazeplateforme-create/Huntazeapp/releases/download/v0.0.3/Huntaze-0.0.3-arm64.dmg
+https://github.com/huntazeplateforme-create/Huntazeapp/releases/download/v0.0.4/Huntaze-0.0.4-arm64.dmg
 ```
 
 Ce lien est déjà configuré dans :
