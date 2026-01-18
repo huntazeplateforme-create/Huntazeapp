@@ -1,106 +1,79 @@
-# Huntaze Desktop App
+# Huntaze Desktop
 
-<div align="center">
-  <img src="https://app.huntaze.com/huntaze-logo.png" alt="Huntaze Logo" width="200"/>
-  
-  <h3>Native Desktop App for Huntaze Platform</h3>
-  
-  [![Version](https://img.shields.io/badge/version-0.0.1-blue.svg)](https://github.com/huntazeplateforme-create/Huntazeapp/releases)
-  [![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows-lightgrey.svg)](https://github.com/huntazeplateforme-create/Huntazeapp/releases)
-  [![License](https://img.shields.io/badge/license-Proprietary-red.svg)](LICENSE)
-  [![Beta](https://img.shields.io/badge/status-BETA-yellow.svg)](https://github.com/huntazeplateforme-create/Huntazeapp/releases)
-</div>
+Application Electron pour gérer les sessions OnlyFans et synchroniser avec Huntaze.
 
----
+## 🚀 Quick Start
 
-## 📥 Download
+### Development
 
-### Latest Release: v0.0.1 (Beta)
+```bash
+npm install
+npm run dev
+```
 
-| Platform | Download | Size |
-|----------|----------|------|
-| **macOS (Apple Silicon)** | [Download DMG](https://github.com/huntazeplateforme-create/Huntazeapp/releases/download/v0.0.1/Huntaze-0.0.1-arm64.dmg) | ~105 MB |
-| **Windows** | Coming Soon | - |
+### Build pour production
 
-## ✨ Features
+```bash
+# Build avec signature ad-hoc (recommandé)
+./scripts/sign-and-build.sh
 
-- 🖥️ **Full Huntaze Platform** - Complete access to all Huntaze features in a native desktop window
-- 🔒 **Privacy First** - Your credentials stay local, secure session management
-- ⚡ **Auto-Sync** - Automatically syncs your OnlyFans data to Huntaze cloud
-- 🎯 **Multi-Account Support** - Manage multiple OnlyFans accounts with isolated sessions
-- 🚀 **Native Performance** - Built with Electron for optimal desktop experience
+# Ou build simple
+npm run dist
+```
 
-## 🚀 Installation
+Le DMG sera dans `release/`.
 
-### macOS
+## 📦 Distribution
 
-1. Download the DMG file from the [releases page](https://github.com/huntazeplateforme-create/Huntazeapp/releases)
-2. Open the DMG file
-3. Drag **Huntaze.app** to your Applications folder
-4. Launch Huntaze from Applications
+Le DMG généré inclut une signature ad-hoc pour éviter le message "App is damaged" sur macOS.
 
-**Note:** On first launch, you may need to right-click the app and select "Open" to bypass Gatekeeper (unsigned app).
+**Important** : Les utilisateurs devront quand même contourner Gatekeeper au premier lancement. Voir `INSTALLATION_GUIDE.md` pour les instructions à leur donner.
 
-### Windows
+## 🔧 Configuration
 
-Coming soon! Request early access: support@huntaze.com
+### Prérequis
+- macOS 11.0+ (Big Sur)
+- Apple Silicon (M1/M2/M3) pour la version arm64
+- Node.js 18+
 
-## 📋 System Requirements
+### Structure
 
-### macOS
-- macOS 10.13 (High Sierra) or later
-- 64-bit processor
-- 4GB RAM minimum
-- 200MB free disk space
+```
+huntaze-desktop/
+├── src/
+│   ├── main.ts          # Process principal Electron
+│   ├── preload.ts       # Bridge sécurisé
+│   └── renderer/        # UI (si nécessaire)
+├── scripts/
+│   └── sign-and-build.sh # Build + signature
+├── INSTALLATION_GUIDE.md # Pour les utilisateurs
+└── package.json
+```
 
-### Windows
-- Windows 10 or later
-- 64-bit processor
-- 4GB RAM minimum
-- 200MB free disk space
+## 🐛 Troubleshooting
 
-## 🔧 How It Works
+### "App is damaged" sur macOS
 
-1. **Launch** - The app opens and loads the full Huntaze platform (app.huntaze.com)
-2. **Connect** - Navigate to integrations and connect your OnlyFans account(s)
-3. **Sync** - The app captures OnlyFans data and syncs automatically
-4. **Manage** - Access all Huntaze features seamlessly in the desktop app
+Voir `INSTALLATION_GUIDE.md` pour les solutions utilisateur.
 
-## 🐛 Known Issues (Beta)
+Pour les développeurs : utiliser `./scripts/sign-and-build.sh` au lieu de `npm run dist`.
 
-- App is unsigned, requires manual approval on first launch (macOS)
-- Windows version not yet available
-- Auto-update not yet implemented
+### Vérifier la signature
 
-## 📞 Support
+```bash
+codesign --verify --deep --strict --verbose=2 "release/mac-arm64/Huntaze Desktop.app"
+```
 
-- **Email:** support@huntaze.com
-- **Website:** [huntaze.com](https://huntaze.com)
-- **Platform:** [app.huntaze.com](https://app.huntaze.com)
+## 📚 Documentation
 
-## 🔐 Security & Privacy
+- [Fix DMG Signature](./FIX_DMG_SIGNATURE.md) - Guide technique complet
+- [Installation Guide](./INSTALLATION_GUIDE.md) - Pour les utilisateurs finaux
 
-- All credentials are stored locally on your device
-- Session data is encrypted before syncing to Huntaze cloud
-- No passwords are ever transmitted or stored on our servers
-- Open-source components: Electron, Chromium
+## 🔐 Sécurité
 
-## 📝 Changelog
+L'app utilise :
+- Signature ad-hoc (minimum viable)
+- Pas de notarisation (nécessite Apple Developer Account)
+- Code open-source et auditable
 
-### v0.0.1 (2026-01-17) - Beta Release
-
-- ✨ Initial beta release
-- 🖥️ macOS Apple Silicon support
-- 🔒 Secure session management
-- ⚡ Auto-sync functionality
-- 🎯 Multi-account OnlyFans support
-
-## 📄 License
-
-Proprietary - © 2026 Huntaze. All rights reserved.
-
----
-
-<div align="center">
-  Made with ❤️ by the Huntaze Team
-</div>
+Pour une distribution "officielle", voir les étapes de notarisation dans `FIX_DMG_SIGNATURE.md`.

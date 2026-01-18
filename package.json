@@ -1,0 +1,56 @@
+{
+  "name": "huntaze-desktop",
+  "version": "0.0.1",
+  "description": "Huntaze Desktop - Native Electron app for OnlyFans creators",
+  "author": "Huntaze Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/huntazeplateforme-create/Huntazeapp.git"
+  },
+  "private": false,
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "npm run build && electron .",
+    "start": "electron .",
+    "pack": "npm run build && electron-builder --dir",
+    "dist": "npm run build && PYTHON_PATH=$(which python3) electron-builder"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "electron": "^33.4.0",
+    "electron-builder": "^24.13.3",
+    "typescript": "^5.9.3"
+  },
+  "build": {
+    "appId": "com.huntaze.desktop",
+    "productName": "Huntaze Desktop",
+    "files": [
+      "dist/**/*",
+      "package.json"
+    ],
+    "asar": true,
+    "directories": {
+      "output": "release"
+    },
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": [
+        {
+          "target": "dir",
+          "arch": ["arm64"]
+        }
+      ],
+      "identity": null,
+      "hardenedRuntime": false,
+      "gatekeeperAssess": false
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    }
+  }
+}
+
