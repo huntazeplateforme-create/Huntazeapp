@@ -8,6 +8,7 @@ APP_PATH="release/mac-arm64/${APP_NAME}.app"
 DMG_NAME="Huntaze-0.0.3-arm64.dmg"
 DMG_PATH="release/${DMG_NAME}"
 VOLUME_NAME="Huntaze"
+STAGING_DIR=""
 
 if [ ! -d "$APP_PATH" ]; then
   echo "❌ App not found at $APP_PATH"
@@ -15,11 +16,28 @@ if [ ! -d "$APP_PATH" ]; then
   exit 1
 fi
 
+# Cleanup temp directory on exit
+cleanup() {
+  if [ -n "$STAGING_DIR" ] && [ -d "$STAGING_DIR" ]; then
+    rm -rf "$STAGING_DIR"
+  fi
+}
+trap cleanup EXIT
+
 # Remove old DMG if exists
 rm -f "$DMG_PATH"
 
-echo "Creating temporary DMG..."
-hdiutil create -volname "$VOLUME_NAME" -srcfolder "$APP_PATH" -ov -format UDZO "$DMG_PATH"
+echo "Preparing DMG contents..."
+STAGING_DIR="$(mktemp -d)"
+
+# Copy signed app bundle (preserve permissions/resources)
+ditto "$APP_PATH" "$STAGING_DIR/${APP_NAME}.app"
+
+# Add Applications shortcut for drag-and-drop installs
+ln -s /Applications "$STAGING_DIR/Applications"
+
+echo "Creating DMG..."
+hdiutil create -volname "$VOLUME_NAME" -srcfolder "$STAGING_DIR" -ov -format UDZO "$DMG_PATH"
 
 echo "✅ DMG created: $DMG_PATH"
 ls -lh "$DMG_PATH"
