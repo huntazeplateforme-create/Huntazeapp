@@ -5,7 +5,7 @@ echo "📦 Creating DMG from signed app..."
 
 APP_NAME="Huntaze Desktop"
 APP_PATH="release/mac-arm64/${APP_NAME}.app"
-DMG_NAME="Huntaze-0.0.1-arm64.dmg"
+DMG_NAME="Huntaze-0.0.3-arm64.dmg"
 DMG_PATH="release/${DMG_NAME}"
 VOLUME_NAME="Huntaze"
 

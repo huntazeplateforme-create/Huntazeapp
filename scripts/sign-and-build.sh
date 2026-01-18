@@ -28,7 +28,7 @@ if [ -d "$APP_PATH" ]; then
   echo ""
   echo "✅ All done!"
   echo "📦 Signed app: $APP_PATH"
-  echo "📦 DMG: release/Huntaze-0.0.1-arm64.dmg"
+  echo "📦 DMG: release/Huntaze-0.0.3-arm64.dmg"
 else
   echo "❌ App not found at $APP_PATH"
   exit 1
