@@ -1,12 +1,18 @@
 # Guide d'installation Huntaze Desktop (macOS)
 
-## ⚠️ Message "App is damaged"
+## ⚠️ Messages de sécurité macOS (Gatekeeper)
 
-Si vous voyez ce message, c'est normal ! L'app n'est pas encore notarisée par Apple.
+Comme l'app n'est pas encore **signée + notarisée** par Apple, macOS peut afficher l'un de ces messages :
+
+- **"Apple could not verify “Huntaze Desktop” is free of malware…"**
+- **"Huntaze Desktop” can’t be opened because Apple cannot check it for malicious software."**
+- **"Developer cannot be verified"**
+
+Ce n'est **pas** un bug de l'app : c'est Gatekeeper.
 
 ### Solution 1 : Via System Settings (Recommandé)
 
-1. **Double-cliquez** sur `Huntaze Desktop.app` → Message "damaged" apparaît
+1. Essayez d'ouvrir `Huntaze Desktop.app` (vous verrez l'alerte)
 2. Ouvrez **System Settings** → **Privacy & Security**
 3. Scrollez vers le bas → Vous verrez un message concernant Huntaze
 4. Cliquez sur **"Open Anyway"**
@@ -16,8 +22,8 @@ Si vous voyez ce message, c'est normal ! L'app n'est pas encore notarisée par A
 ### Solution 2 : Via Terminal (Plus rapide)
 
 ```bash
-# Ouvrez Terminal et tapez :
-xattr -cr "/Applications/Huntaze Desktop.app"
+# Après avoir copié l'app dans /Applications
+xattr -dr com.apple.quarantine "/Applications/Huntaze Desktop.app"
 
 # Puis lancez l'app normalement
 ```
